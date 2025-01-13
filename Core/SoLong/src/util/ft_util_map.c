@@ -98,10 +98,10 @@ int	ft_check_file_format(const char *file)
 	}
 	fd = open(file, O_RDONLY);
 	close(fd);
-	if ((file[strlen(file) - 4] != '.'
-			&& file[strlen(file) - 3] != 'b'
-			&& file[strlen(file) - 2] != 'e'
-			&& file[strlen(file) - 1] != 'r') || fd < 0)
+	if ((file[ft_strlen(file) - 4] != '.'
+			&& file[ft_strlen(file) - 3] != 'b'
+			&& file[ft_strlen(file) - 2] != 'e'
+			&& file[ft_strlen(file) - 1] != 'r') || fd < 0)
 		return (-1);
 	return (0);
 }
